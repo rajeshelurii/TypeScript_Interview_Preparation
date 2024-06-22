@@ -425,8 +425,16 @@ class Circle {
   }
 }
 
-let circle = new Circle(10);
-console.log(circle.calculateArea()); // 314
+// Accessing the static property
+console.log(Circle.pi); // 3.14
+
+// Creating an instance of Circle and using an instance method
+const circle = new Circle(10);
+console.log(circle.getArea()); // 314
+
+// Trying to access the static property through an instance
+// console.log(circle.pi); // Error: Property 'pi' does not exist on type 'Circle'
+
 ```
 
 #### Abstract Classes
