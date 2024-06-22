@@ -564,7 +564,7 @@ logLength({ length: 10, value: "Hello" }); // Output: 10
 // logLength(3); // Error: Argument of type 'number' is not assignable to parameter of type 'Lengthwise'.
 ```
 
-In this example, the `logLength` function only accepts arguments that have a `length` property. This constraint is enforced by `T extends Lengthwise`.
+In this example, the `logLength` function only accepts arguments that have a `length` property(here propery means ex: for a string type implicitly we can use int1.length or { length: 10, value: "Hello" } here we have inserted explicitly length propery as an object form). This constraint is enforced by `T extends Lengthwise`.
 
 #### Difference b/w Any Type and Generic type
 
