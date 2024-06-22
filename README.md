@@ -549,7 +549,7 @@ In this example, `Pair` is a generic interface with two type parameters `T` and 
 
 #### Generic Constraints
 
-You can impose constraints on the types that can be used with generics by using the `extends` keyword.
+Generic constraints are used to restrict the types that can be passed to a generic function, class, or interface. This means you can specify that a generic type must have certain properties or methods.
 
 ```typescript
 interface Lengthwise {
