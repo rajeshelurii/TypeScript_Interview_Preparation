@@ -393,6 +393,21 @@ let myCar = new Vehicle('Toyota');
 console.log(myCar.make); // Toyota
 // myCar.make = 'Honda'; // Error: Cannot assign to 'make' because it is a read-only property.
 ```
+#### Constant variable
+The `Constant` is similar to that of readonly but it need to be initialize at declaration.
+```typescript
+const PI = 3.14;
+const GREETING = "Hello, World!";
+GREETING = "Bye"; // Error: Cannot assign to 'GREETING' because it is a constant
+
+const user = { name: "Alice", age: 30 };
+user.age = 31; // This is allowed
+user = { name: "Ten", age: 32 }; // This is not allowed
+
+const numbers = [1, 2, 3];
+numbers.push(4); // This is allowed
+numbers = [7, 9, 10, 11]; //This is not allowed
+```
 
 #### Static Properties
 Static properties are shared among all instances of a class.
