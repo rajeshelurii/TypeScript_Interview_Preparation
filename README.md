@@ -393,7 +393,7 @@ let myCar = new Vehicle('Toyota');
 console.log(myCar.make); // Toyota
 // myCar.make = 'Honda'; // Error: Cannot assign to 'make' because it is a read-only property.
 ```
-#### Constant variable
+#### Constant Variable
 The `Constant` is similar to that of readonly but it need to be initialize at declaration.
 ```typescript
 const PI = 3.14;
