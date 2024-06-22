@@ -568,7 +568,7 @@ In this example, the `logLength` function only accepts arguments that have a `le
 
 #### Difference b/w Generic Type and Any type
 
-##### `any` Type
+**`any` Type**
 - **No Type Checking**: Allows any type of value without compile-time checks.
 - **Maximum Flexibility**: Can hold any type of value and perform any operation.
 - **Loss of Type Safety**: Increases risk of runtime errors due to lack of type constraints.
@@ -576,7 +576,7 @@ In this example, the `logLength` function only accepts arguments that have a `le
 - **Reduced Readability**: Makes code harder to understand and maintain.
 - **Use Sparingly**: Best for cases where the type is truly unknown or for quick prototyping.
 
-##### Generic Type
+**Generic Type**
 - **Type Safety**: Ensures type consistency and correctness at compile-time.
 - **Flexibility with Constraints**: Can work with various types while enforcing type constraints.
 - **Type Inference**: TypeScript can infer types, enhancing safety and reducing errors.
