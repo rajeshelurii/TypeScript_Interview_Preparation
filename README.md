@@ -185,11 +185,11 @@ function logMessage(message: string): void {
 #### Null and Undefined
 In TypeScript, `null` and `undefined` are distinct types that represent the absence of a value. They are part of the basic type system and have specific uses and behaviors.
 
-### TypeScript Configuration
+**TypeScript Configuration**
 
 By default, TypeScript treats `null` and `undefined` in a special way. However, you can configure TypeScript to enforce stricter rules with the `--strictNullChecks` compiler option.
 
-### Without `--strictNullChecks`
+**Without `--strictNullChecks`**
 
 When `--strictNullChecks` is not enabled, `null` and `undefined` are considered valid values for every type. This means you can assign `null` and `undefined` to any variable.
 
@@ -199,7 +199,7 @@ value = null;        // OK
 value = undefined;   // OK
 ```
 
-### With `--strictNullChecks`
+**With `--strictNullChecks`**
 
 When `--strictNullChecks` is enabled, `null` and `undefined` are only assignable to their respective types or to `any` type. This stricter checking helps catch errors where `null` or `undefined` might be assigned inadvertently.
 
