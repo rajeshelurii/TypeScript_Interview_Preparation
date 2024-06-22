@@ -175,7 +175,7 @@ randomValue = true;
 ```
 
 #### Void
-The `void` type is used for functions that do not return a value.
+The `void` type is used for functions that do not return a value. It can implicitly return undefined.
 ```typescript
 function logMessage(message: string): void {
   console.log(message);
@@ -222,7 +222,7 @@ maybe = undefined;   // OK
 ```
 
 #### Never
-The `never` type represents the type of values that never occur.
+The `never` type represents the type of values that never occur.  It doesn't even return undefined like void. it is used for throwing exceptions since the value never occurs, example throwing an exception is default case in switch statement.
 ```typescript
 function error(message: string): never {
   throw new Error(message);
