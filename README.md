@@ -112,6 +112,16 @@ To set up TypeScript, follow these steps:
    ```
    This will compile your `.ts` files into `.js` files.
 
+Node.js and npm are essential tools for modern JavaScript development, particularly for server-side and full-stack development.
+
+### Node.js
+
+**Node.js** is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to use JavaScript to write server-side scripts, enabling dynamic web page content before the page is sent to the user's web browser. This makes it possible to use JavaScript for both client-side and server-side code.
+
+### npm
+
+**npm** (Node Package Manager) is the default package manager for Node.js. It is a critical tool for managing JavaScript packages and dependencies.
+
 ### 2. Basic Types
 
 #### Number
