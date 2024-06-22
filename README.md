@@ -566,9 +566,9 @@ logLength({ length: 10, value: "Hello" }); // Output: 10
 
 In this example, the `logLength` function only accepts arguments that have a `length` property. This constraint is enforced by `T extends Lengthwise`.
 
-#### Difference b/w Generic Type and Any type
+#### Difference b/w Any Type and Generic type
 
-**`any` Type**
+**Any Type**
 - **No Type Checking**: Allows any type of value without compile-time checks.
 - **Maximum Flexibility**: Can hold any type of value and perform any operation.
 - **Loss of Type Safety**: Increases risk of runtime errors due to lack of type constraints.
