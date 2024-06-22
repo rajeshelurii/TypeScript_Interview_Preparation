@@ -340,7 +340,89 @@ let jane = new Employee('Jane Doe', 123);
 jane.displayEmployeeInfo(); // Output: Name: Jane Doe, Employee ID: 123
 ```
 
-#### Public, Private, Protected Modifiers
+#### Polymorphism
+Polymorphism in TypeScript, as in other object-oriented programming languages, allows objects of different classes to be treated as objects of a common superclass. It is a core concept that allows for methods to do different things based on the object it is acting upon. Polymorphism is typically achieved through method overriding and interfaces.
+
+**Method Overriding**
+
+Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass. This is a form of runtime polymorphism.
+
+```typescript
+class Animal {
+    move(): void {
+        console.log("Animal is moving");
+    }
+}
+
+class Dog extends Animal {
+    move(): void {
+        console.log("Dog is running");
+    }
+}
+
+class Bird extends Animal {
+    move(): void {
+        console.log("Bird is flying");
+    }
+}
+
+function moveAnimal(animal: Animal): void {
+    animal.move();
+}
+
+const myDog = new Dog();
+const myBird = new Bird();
+
+moveAnimal(myDog);  // Output: Dog is running
+moveAnimal(myBird); // Output: Bird is flying
+```
+
+In this example, the `move` method is overridden in both `Dog` and `Bird` classes. When `moveAnimal` function is called with different instances, the corresponding method of that instance is executed.
+
+**Interfaces and Polymorphism**
+
+Interfaces can also be used to achieve polymorphism. By defining a common interface that different classes implement, you can write code that works with any class that implements the interface.
+
+```typescript
+interface Shape {
+    getArea(): number;
+}
+
+class Circle implements Shape {
+    constructor(public radius: number) {}
+
+    getArea(): number {
+        return Math.PI * this.radius ** 2;
+    }
+}
+
+class Rectangle implements Shape {
+    constructor(public width: number, public height: number) {}
+
+    getArea(): number {
+        return this.width * this.height;
+    }
+}
+
+function printArea(shape: Shape): void {
+    console.log(`The area is ${shape.getArea()}`);
+}
+
+const myCircle = new Circle(5);
+const myRectangle = new Rectangle(4, 6);
+
+printArea(myCircle);    // Output: The area is 78.53981633974483
+printArea(myRectangle); // Output: The area is 24
+```
+
+In this example, both `Circle` and `Rectangle` classes implement the `Shape` interface. The `printArea` function accepts any object that implements the `Shape` interface, demonstrating polymorphism.
+
+Using polymorphism in TypeScript helps in creating scalable and maintainable code by allowing flexibility in how objects are used and interacted with.
+
+#### Encapsulation
+Encapsulation restricts direct access to some of an object's components, which can be achieved using access modifiers such as private, protected, and public.
+
+Public, Private, Protected Modifiers
 Access modifiers control the accessibility of class members.
 - `public` (default) members are accessible everywhere.
 - `private` members are only accessible within the class.
@@ -378,6 +460,31 @@ console.log(myDog.age); // 5
 console.log(myDog.getName()); // Buddy
 console.log(myDog.getSpecies()); // Dog
 ```
+### Abstraction
+
+Abstraction means hiding the complex implementation details and showing only the essential features of an object. Abstract classes and interfaces are used to achieve abstraction.
+
+#### Abstract Classes
+Abstract classes cannot be instantiated and must be extended by other classes. Abstract methods can be used only inside abstract class. it makes subclasses to mandate the implementation of abstract method.
+```typescript
+abstract class Animal {
+  abstract makeSound(): void;
+  move(): void {
+    console.log('Moving...');
+  }
+}
+
+class Cat extends Animal {
+  makeSound(): void {
+    console.log('Meow');
+  }
+}
+
+let myCat = new Cat();
+myCat.makeSound(); // Meow
+myCat.move(); // Moving...
+```
+
 
 #### Readonly Modifier
 The `readonly` modifier ensures a property can only be assigned once.
@@ -435,27 +542,6 @@ console.log(circle.getArea()); // 314
 // Trying to access the static property through an instance
 // console.log(circle.pi); // Error: Property 'pi' does not exist on type 'Circle'
 
-```
-
-#### Abstract Classes
-Abstract classes cannot be instantiated and must be extended by other classes. Abstract methods can be used only inside abstract class. it makes subclasses to mandate the implementation of abstract method. By using abstraction you can achieve polymorphism.
-```typescript
-abstract class Animal {
-  abstract makeSound(): void;
-  move(): void {
-    console.log('Moving...');
-  }
-}
-
-class Cat extends Animal {
-  makeSound(): void {
-    console.log('Meow');
-  }
-}
-
-let myCat = new Cat();
-myCat.makeSound(); // Meow
-myCat.move(); // Moving...
 ```
 
 #### Interfaces
