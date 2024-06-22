@@ -566,6 +566,24 @@ logLength({ length: 10, value: "Hello" }); // Output: 10
 
 In this example, the `logLength` function only accepts arguments that have a `length` property. This constraint is enforced by `T extends Lengthwise`.
 
+#### Difference b/w Generic Type and Any type
+
+##### `any` Type
+- **No Type Checking**: Allows any type of value without compile-time checks.
+- **Maximum Flexibility**: Can hold any type of value and perform any operation.
+- **Loss of Type Safety**: Increases risk of runtime errors due to lack of type constraints.
+- **No Type Inference**: TypeScript does not infer types, leading to potential issues.
+- **Reduced Readability**: Makes code harder to understand and maintain.
+- **Use Sparingly**: Best for cases where the type is truly unknown or for quick prototyping.
+
+##### Generic Type
+- **Type Safety**: Ensures type consistency and correctness at compile-time.
+- **Flexibility with Constraints**: Can work with various types while enforcing type constraints.
+- **Type Inference**: TypeScript can infer types, enhancing safety and reducing errors.
+- **Improved Readability**: Explicitly defines type relationships, making code clearer.
+- **Reusable Components**: Ideal for creating functions, classes, and interfaces that work with multiple types.
+- **Preferred Choice**: Use generics for writing flexible and type-safe code. 
+
 ### 6. Advanced Topics
 
 #### Type Guards and Differentiating Types
