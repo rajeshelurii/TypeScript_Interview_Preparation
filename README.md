@@ -260,10 +260,9 @@ jane.displayEmployeeInfo(); // Output: Name: Jane Doe, Employee ID: 123
 ```
 
 #### Polymorphism
-Polymorphism in TypeScript, as in other object-oriented programming languages, allows objects of different classes to be treated as objects of a common superclass. It is a core concept that allows for methods to do different things based on the object it is acting upon. Polymorphism is typically achieved through method overriding and interfaces.
+Polymorphism allows objects of different classes to be treated as objects of a common superclass. It is a core concept that allows for methods to do different things based on the object it is acting upon. Polymorphism is typically achieved through method overriding and interfaces.
 
-**Method Overriding**
-Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass. This is a form of runtime polymorphism.
+**Method Overriding** allows a subclass to provide a specific implementation of a method that is already defined in its superclass. This is a form of runtime polymorphism.
 
 ```typescript
 class Animal {
@@ -295,10 +294,7 @@ moveAnimal(myDog);  // Output: Dog is running
 moveAnimal(myBird); // Output: Bird is flying
 ```
 
-In this example, the `move` method is overridden in both `Dog` and `Bird` classes. When `moveAnimal` function is called with different instances, the corresponding method of that instance is executed.
-
-**Interfaces and Polymorphism**
-Interfaces can also be used to achieve polymorphism. By defining a common interface that different classes implement, you can write code that works with any class that implements the interface.
+**Interfaces** can also be used to achieve polymorphism. By defining a common interface that different classes implement, you can write code that works with any class that implements the interface.
 
 ```typescript
 interface Shape {
@@ -331,10 +327,6 @@ const myRectangle = new Rectangle(4, 6);
 printArea(myCircle);    // Output: The area is 78.53981633974483
 printArea(myRectangle); // Output: The area is 24
 ```
-
-In this example, both `Circle` and `Rectangle` classes implement the `Shape` interface. The `printArea` function accepts any object that implements the `Shape` interface, demonstrating polymorphism.
-
-Using polymorphism in TypeScript helps in creating scalable and maintainable code by allowing flexibility in how objects are used and interacted with.
 
 #### Encapsulation
 Encapsulation restricts direct access to some of an object's components, which can be achieved using access modifiers such as private, protected, and public.
