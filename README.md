@@ -222,7 +222,7 @@ mySearch = function(source: string, subString: string) {
 }
 ```
 
-### 4. Classes and Interfaces
+### 4. Object-Oriented Programming
 
 #### Class Basics
 TypeScript supports object-oriented programming features like classes.
