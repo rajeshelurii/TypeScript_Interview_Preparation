@@ -344,7 +344,6 @@ jane.displayEmployeeInfo(); // Output: Name: Jane Doe, Employee ID: 123
 Polymorphism in TypeScript, as in other object-oriented programming languages, allows objects of different classes to be treated as objects of a common superclass. It is a core concept that allows for methods to do different things based on the object it is acting upon. Polymorphism is typically achieved through method overriding and interfaces.
 
 **Method Overriding**
-
 Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass. This is a form of runtime polymorphism.
 
 ```typescript
@@ -380,7 +379,6 @@ moveAnimal(myBird); // Output: Bird is flying
 In this example, the `move` method is overridden in both `Dog` and `Bird` classes. When `moveAnimal` function is called with different instances, the corresponding method of that instance is executed.
 
 **Interfaces and Polymorphism**
-
 Interfaces can also be used to achieve polymorphism. By defining a common interface that different classes implement, you can write code that works with any class that implements the interface.
 
 ```typescript
@@ -464,7 +462,7 @@ console.log(myDog.getSpecies()); // Dog
 
 Abstraction means hiding the complex implementation details and showing only the essential features of an object. Abstract classes and interfaces are used to achieve abstraction.
 
-#### Abstract Classes
+**Abstract Classes**
 Abstract classes cannot be instantiated and must be extended by other classes. Abstract methods can be used only inside abstract class. it makes subclasses to mandate the implementation of abstract method.
 ```typescript
 abstract class Animal {
