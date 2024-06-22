@@ -183,10 +183,70 @@ function logMessage(message: string): void {
 ```
 
 #### Null and Undefined
-`null` and `undefined` are subtypes of all other types.
+In TypeScript, `null` and `undefined` are distinct types that represent the absence of a value. They are part of the basic type system and have specific uses and behaviors.
+
+### `undefined`
+
+- **Type**: `undefined`
+- **Default value**: The default value for uninitialized variables and function parameters that were not provided a value.
+- **Usage**: Represents a variable that has been declared but not assigned a value.
+
 ```typescript
-let u: undefined = undefined;
-let n: null = null;
+let notInitialized: undefined;
+console.log(notInitialized); // Output: undefined
+
+function doSomething(x: number): void {
+    console.log(x);
+}
+
+let result = doSomething(5);
+console.log(result); // Output: undefined (function returns nothing)
+```
+
+### `null`
+
+- **Type**: `null`
+- **Usage**: Represents the intentional absence of any object value. It is often used to signify "no value" or "empty."
+
+```typescript
+let emptyValue: null = null;
+console.log(emptyValue); // Output: null
+```
+
+### TypeScript Configuration
+
+By default, TypeScript treats `null` and `undefined` in a special way. However, you can configure TypeScript to enforce stricter rules with the `--strictNullChecks` compiler option.
+
+#### Without `--strictNullChecks`
+
+When `--strictNullChecks` is not enabled, `null` and `undefined` are considered valid values for every type. This means you can assign `null` and `undefined` to any variable.
+
+```typescript
+let value: number;
+value = null;        // OK
+value = undefined;   // OK
+```
+
+#### With `--strictNullChecks`
+
+When `--strictNullChecks` is enabled, `null` and `undefined` are only assignable to their respective types or to `any` type. This stricter checking helps catch errors where `null` or `undefined` might be assigned inadvertently.
+
+```typescript
+let value: number;
+value = null;        // Error
+value = undefined;   // Error
+
+let nullableValue: number | null;
+nullableValue = null;  // OK
+nullableValue = undefined;  // Error
+
+let undefinableValue: number | undefined;
+undefinableValue = undefined;  // OK
+undefinableValue = null;  // Error
+
+let maybe: number | null | undefined;
+maybe = null;        // OK
+maybe = undefined;   // OK
 ```
 
 #### Never
