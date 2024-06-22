@@ -684,7 +684,7 @@ type OmitTodo = Omit<Todo, 'description'>;
 ### 7. Decorators
 
 #### Introduction to Decorators
-Decorators are a special kind of declaration that can be attached to a class, method, accessor, property, or parameter. They enable modifying behavior at runtime.
+Decorators are a special kind of declaration in TypeScript that can be attached to a class, method, accessor, property, or parameter. They allow you to modify the behavior of the decorated entity at runtime. By using decorators, you can enhance or change the predefined behavior of that entity, providing a powerful tool for meta-programming and adding reusable functionality.
 
 To enable experimental decorators, add `"experimentalDecorators": true` to your `tsconfig.json`.
 
