@@ -438,7 +438,7 @@ console.log(circle.getArea()); // 314
 ```
 
 #### Abstract Classes
-Abstract classes cannot be instantiated and must be extended by other classes.
+Abstract classes cannot be instantiated and must be extended by other classes. Abstract methods can be used only inside abstract class. it makes subclasses to mandate the implementation of abstract method. By using abstraction you can achieve polimorphism.
 ```typescript
 abstract class Animal {
   abstract makeSound(): void;
