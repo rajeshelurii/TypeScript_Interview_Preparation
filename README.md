@@ -1,84 +1,3 @@
-### Total Guide to Learning TypeScript for Coding Interviews
-
-#### Table of Contents
-1. **Introduction to TypeScript**
-   - What is TypeScript?
-   - Why Use TypeScript?
-   - Setting Up TypeScript
-
-2. **Basic Types**
-   - Number
-   - String
-   - Boolean
-   - Array
-   - Tuple
-   - Enum
-   - Any
-   - Void
-   - Null and Undefined
-   - Never
-
-3. **Advanced Types**
-   - Type Assertions
-   - Type Inference
-   - Union Types
-   - Intersection Types
-   - Literal Types
-   - Type Aliases
-   - Interface
-   - Function Types
-
-4. **Classes and Interfaces**
-   - Class Basics
-   - Inheritance
-   - Public, Private, Protected Modifiers
-   - Readonly Modifier
-   - Static Properties
-   - Abstract Classes
-   - Interfaces
-
-5. **Generics**
-   - Introduction to Generics
-   - Generic Functions
-   - Generic Classes
-   - Generic Interfaces
-   - Constraints in Generics
-
-6. **Advanced Topics**
-   - Type Guards and Differentiating Types
-   - Type Compatibility
-   - Module Augmentation
-   - Declaration Merging
-   - Utility Types
-   - Conditional Types
-
-7. **Decorators**
-   - Introduction to Decorators
-   - Class Decorators
-   - Method Decorators
-   - Accessor Decorators
-   - Property Decorators
-   - Parameter Decorators
-
-8. **Modules and Namespaces**
-   - Introduction to Modules
-   - Export and Import
-   - Default Exports
-   - Namespaces
-   - Module Resolution
-
-9. **Asynchronous Programming**
-   - Promises
-   - Async/Await
-   - Working with APIs
-
-10. **Interview Preparation Programs**
-    - Common Algorithms
-    - Data Structures
-    - Sample Coding Interview Problems
-
----
-
 ### 1. Introduction to TypeScript
 
 #### What is TypeScript?
@@ -458,7 +377,7 @@ console.log(myDog.age); // 5
 console.log(myDog.getName()); // Buddy
 console.log(myDog.getSpecies()); // Dog
 ```
-### Abstraction
+#### Abstraction
 
 Abstraction means hiding the complex implementation details and showing only the essential features of an object. Abstract classes and interfaces are used to achieve abstraction.
 
