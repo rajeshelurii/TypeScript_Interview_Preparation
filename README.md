@@ -482,7 +482,7 @@ console.log(rect.area()); // 200
 
 Generics in TypeScript provide a way to create reusable and flexible components that can work with a variety of data types. By using generics, you can write functions, classes, and interfaces that can operate on different types without sacrificing type safety. This makes your code more robust and maintainable.
 
-### Generic Functions
+#### Generic Functions
 
 A generic function is defined using a type parameter, which acts as a placeholder for the actual type that will be provided when the function is called.
 
@@ -500,7 +500,7 @@ console.log(stringIdentity); // Output: Hello
 
 In this example, the `identity` function takes a type parameter `T` and an argument of type `T`. It returns a value of type `T`. When calling the function, you can specify the type (`number` and `string` in this case).
 
-### Generic Classes
+#### Generic Classes
 
 Generic classes allow you to define classes that can operate on different types.
 
@@ -526,7 +526,7 @@ console.log(stringBox.getContents()); // Output: TypeScript
 
 In this example, `GenericBox` is a generic class that works with any type `T`. The type is specified when creating an instance of the class.
 
-### Generic Interfaces
+#### Generic Interfaces
 
 Generic interfaces allow you to define a contract for functions, classes, or objects that work with various types.
 
@@ -547,7 +547,7 @@ console.log(pair.second); // Output: Hello
 
 In this example, `Pair` is a generic interface with two type parameters `T` and `U`, representing the types of its properties.
 
-### Generic Constraints
+#### Generic Constraints
 
 You can impose constraints on the types that can be used with generics by using the `extends` keyword.
 
