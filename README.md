@@ -987,7 +987,7 @@ fetchData('https://api.example.com/data');
    - The list (array) must be sorted prior to performing a binary search.
 
 3. **Time Complexity**:
-   - The time complexity of binary search is (O(log n), where n is the number of elements in the array. This makes it much more efficient than linear search O(n) for large datasets.
+   - The time complexity of binary search is O(log n), where n is the number of elements in the array. This makes it much more efficient than linear search O(n) for large datasets.
 
 4. **Space Complexity**:
    - The space complexity of the iterative version of binary search is O(1), as it uses a constant amount of extra space.
