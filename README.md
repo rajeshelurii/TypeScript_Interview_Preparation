@@ -1140,10 +1140,6 @@ class Stack<T> {
     return this.items[this.items.length - 1];
   }
 
-  isEmpty(): boolean {
-    return this.items.length === 0;
-  }
-
   size(): number {
     return this.items.length;
   }
@@ -1174,10 +1170,6 @@ class Queue<T> {
     return this.items[0];
   }
 
-  isEmpty(): boolean {
-    return this.items.length === 0;
-  }
-
   size(): number {
     return this.items.length;
   }
@@ -1185,9 +1177,7 @@ class Queue<T> {
 
 const queue = new Queue<number>();
 queue.enqueue(1);
-queue
-
-.enqueue(2);
+queue.enqueue(2);
 console.log(queue.front()); // 1
 console.log(queue.dequeue()); // 1
 console.log(queue.dequeue()); // 2
