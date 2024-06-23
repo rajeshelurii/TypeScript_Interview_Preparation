@@ -1124,6 +1124,7 @@ console.log(mergeSort([10, 24, 76, 73, 72, 1, 9])); // [1, 9, 10, 24, 72, 73, 76
 #### Data Structures
 
 ##### 1. **Stack**
+- A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning the last element added to the stack is the first one to be removed.
 ```typescript
 class Stack<T> {
   private items: T[] = [];
@@ -1154,6 +1155,7 @@ console.log(stack.pop()); // 1
 ```
 
 ##### 2. **Queue**
+- A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, meaning the first element added to the queue is the first one to be removed.
 ```typescript
 class Queue<T> {
   private items: T[] = [];
