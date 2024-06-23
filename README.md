@@ -1070,16 +1070,8 @@ function linearSearch(arr: number[], target: number): number {
   return -1; // Target not found
 }
 
-// Example usage:
-const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-const targetValue = 7;
-const result = linearSearch(sortedArray, targetValue);
+const result = linearSearch([10, 3, 5, 17, 9, 11, 13, 15, 1, 19], 5); // Outputs: 2
 
-if (result !== -1) {
-  console.log(`Element found at index: ${result}`);
-} else {
-  console.log('Element not found');
-}
 ```
 **Time and Space Complexity**
 
