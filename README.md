@@ -978,7 +978,7 @@ fetchData('https://api.example.com/data');
 #### Common Algorithms
 
 ##### 1. **Binary Search**
-### Key Points on Binary Search
+**Key Points on Binary Search**
 
 1. **Definition**:
    - Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until the possible locations are narrowed down to just one.
@@ -1020,6 +1020,9 @@ fetchData('https://api.example.com/data');
        }
        return -1;
      }
+
+     console.log(BinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8)); // Outputs: 7
+     
      ```
 
    - **Recursive**:
@@ -1037,6 +1040,8 @@ fetchData('https://api.example.com/data');
          return binarySearchRecursive(arr, target, left, mid - 1);
        }
      }
+
+     console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3); // Outputs: 2
      ```
 
 7. **Advantages**:
@@ -1056,7 +1061,7 @@ fetchData('https://api.example.com/data');
     - **Incorrect Mid Calculation**: Ensure correct parentheses to avoid errors in mid calculation: `mid = Math.floor((left + right) / 2)`.
     - **Infinite Loop**: Ensure the loop terminates correctly, particularly by updating the `left` and `right` pointers appropriately.
 
-### Summary
+**Summary**
 
 Binary search is a powerful and efficient algorithm for searching in sorted arrays. Its logarithmic time complexity makes it suitable for large datasets, though it requires the data to be sorted. By understanding its mechanics, applications, and limitations, you can leverage binary search to improve the performance of search operations in your programs.
 
