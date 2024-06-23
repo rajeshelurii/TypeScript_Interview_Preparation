@@ -987,11 +987,11 @@ fetchData('https://api.example.com/data');
    - The list (array) must be sorted prior to performing a binary search.
 
 3. **Time Complexity**:
-   - The time complexity of binary search is \(O(\log n)\), where \(n\) is the number of elements in the array. This makes it much more efficient than linear search (\(O(n)\)) for large datasets.
+   - The time complexity of binary search is (O(log n), where n is the number of elements in the array. This makes it much more efficient than linear search O(n) for large datasets.
 
 4. **Space Complexity**:
-   - The space complexity of the iterative version of binary search is \(O(1)\), as it uses a constant amount of extra space.
-   - The recursive version has a space complexity of \(O(\log n)\) due to the call stack.
+   - The space complexity of the iterative version of binary search is O(1), as it uses a constant amount of extra space.
+   - The recursive version has a space complexity of O(log n) due to the call stack.
 
 5. **Steps of Binary Search**:
    - **Initialization**: Set two pointers, `left` at the beginning (0) and `right` at the end (n-1) of the array.
@@ -1049,7 +1049,7 @@ fetchData('https://api.example.com/data');
    - **Simplicity**: The algorithm is relatively simple and easy to implement.
 
 8. **Limitations**:
-   - **Sorted Data Requirement**: The array must be sorted before performing binary search. If the data is unsorted, it must be sorted first, which takes \(O(n \log n)\) time.
+   - **Sorted Data Requirement**: The array must be sorted before performing binary search. If the data is unsorted, it must be sorted first, which takes O(n log n) time.
    - **Fixed Size**: Binary search works efficiently on data structures that allow random access (like arrays). It is not suitable for linked lists due to the lack of direct access to the middle element.
 
 9. **Applications**:
