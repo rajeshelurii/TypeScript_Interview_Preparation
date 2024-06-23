@@ -815,14 +815,13 @@ let report = new BugReport('Need bug report');
 
 ### 8. Modules and Namespaces
 
-#### Introduction to Modules
 Modules and namespaces in TypeScript are used to organize and structure code, making it easier to manage and maintain. Although both serve similar purposes, they have distinct differences and usage patterns.
 
-### Modules in TypeScript
+#### Modules
 
 Modules in TypeScript are based on the ECMAScript 2015 (ES6) module syntax. Modules allow you to split your code into separate files and import/export them as needed. This promotes code reusability and maintainability.
 
-#### Creating and Exporting Modules
+**Creating and Exporting Modules**
 
 1. **Exporting**:
    - You can export variables, functions, classes, interfaces, etc.
@@ -868,7 +867,7 @@ Modules in TypeScript are based on the ECMAScript 2015 (ES6) module syntax. Modu
    log('Hello, world!'); // Outputs: Hello, world!
    ```
 
-#### Organizing Modules
+**Organizing Modules**
 
 Modules can be organized into directories to better structure your project:
 
