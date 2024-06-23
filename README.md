@@ -915,21 +915,6 @@ let square = new Geometry.Square(5);
 console.log(square.area()); // 25
 ```
 
-#### Module Resolution
-Module resolution is the process TypeScript uses to find what an import refers to.
-```typescript
-// Example with module resolution
-// math.ts
-export function multiply(x: number, y: number): number {
-  return x * y;
-}
-
-// app.ts
-import { multiply } from './math';
-
-console.log(multiply(4, 5)); // 20
-```
-
 ### 9. Asynchronous Programming
 
 #### Promises
