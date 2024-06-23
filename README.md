@@ -1058,6 +1058,8 @@ fetchData('https://api.example.com/data');
 Binary search is a powerful and efficient algorithm for searching in sorted arrays. Its logarithmic time complexity makes it suitable for large datasets, though it requires the data to be sorted. By understanding its mechanics, applications, and limitations, you can leverage binary search to improve the performance of search operations in your programs.
 
 ##### 2. **Linear Search**
+Linear search is a straightforward algorithm for finding a target value within a list. It checks each element of the list sequentially until the target is found or the list ends.
+
 ```typescript
 function linearSearch(arr: number[], target: number): number {
   for (let i = 0; i < arr.length; i++) {
@@ -1079,6 +1081,13 @@ if (result !== -1) {
   console.log('Element not found');
 }
 ```
+**Time and Space Complexity**
+
+- **Time Complexity**: O(n)
+  - In the worst case, linear search needs to check every element in the array. Therefore, the time complexity is linear with respect to the number of elements n.
+
+- **Space Complexity**: O(1)
+  - Linear search only requires a constant amount of extra space, regardless of the input size. This is because it uses a fixed number of variables (`i` for iteration and `target` for comparison).
 
 
 ##### 3. **Quick Sort**
