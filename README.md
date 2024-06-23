@@ -981,7 +981,7 @@ fetchData('https://api.example.com/data');
 **Key Points on Binary Search**
 
 1. **Definition**:
-   - Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until the possible locations are narrowed down to just one.
+   - Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until the possible locations are narrowed down to just one. It uses divide and conquer paradigm.
 
 2. **Precondition**:
    - The list (array) must be sorted prior to performing a binary search.
