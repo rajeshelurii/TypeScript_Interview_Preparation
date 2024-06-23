@@ -993,7 +993,31 @@ function binarySearch(arr: number[], target: number): number {
 console.log(binarySearch([1, 2, 3, 4, 5], 3)); // 2
 ```
 
-##### 2. **Quick Sort**
+##### 2. **Linear Search**
+```typescript
+function linearSearch(arr: number[], target: number): number {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; // Target found, return the index
+    }
+  }
+  return -1; // Target not found
+}
+
+// Example usage:
+const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+const targetValue = 7;
+const result = linearSearch(sortedArray, targetValue);
+
+if (result !== -1) {
+  console.log(`Element found at index: ${result}`);
+} else {
+  console.log('Element not found');
+}
+```
+
+
+##### 3. **Quick Sort**
 ```typescript
 function quickSort(arr: number[]): number[] {
   if (arr.length <= 1) return arr;
@@ -1007,7 +1031,7 @@ function quickSort(arr: number[]): number[] {
 console.log(quickSort([3, 6, 8, 10, 1, 2, 1])); // [1, 1, 2, 3, 6, 8, 10]
 ```
 
-##### 3. **Merge Sort**
+##### 4. **Merge Sort**
 ```typescript
 function mergeSort(arr: number[]): number[] {
   if (arr.length <= 1) return arr;
