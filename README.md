@@ -978,20 +978,87 @@ fetchData('https://api.example.com/data');
 #### Common Algorithms
 
 ##### 1. **Binary Search**
-```typescript
-function binarySearch(arr: number[], target: number): number {
-  let left = 0, right = arr.length - 1;
-  while (left <= right) {
-    const mid = Math.floor((left + right) / 2);
-    if (arr[mid] === target) return mid;
-    else if (arr[mid] < target) left = mid + 1;
-    else right = mid - 1;
-  }
-  return -1;
-}
+### Key Points on Binary Search
 
-console.log(binarySearch([1, 2, 3, 4, 5], 3)); // 2
-```
+1. **Definition**:
+   - Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until the possible locations are narrowed down to just one.
+
+2. **Precondition**:
+   - The list (array) must be sorted prior to performing a binary search.
+
+3. **Time Complexity**:
+   - The time complexity of binary search is \(O(\log n)\), where \(n\) is the number of elements in the array. This makes it much more efficient than linear search (\(O(n)\)) for large datasets.
+
+4. **Space Complexity**:
+   - The space complexity of the iterative version of binary search is \(O(1)\), as it uses a constant amount of extra space.
+   - The recursive version has a space complexity of \(O(\log n)\) due to the call stack.
+
+5. **Steps of Binary Search**:
+   - **Initialization**: Set two pointers, `left` at the beginning (0) and `right` at the end (n-1) of the array.
+   - **Middle Calculation**: Calculate the middle index: `mid = Math.floor((left + right) / 2)`.
+   - **Comparison**:
+     - If `arr[mid]` equals the target value, return `mid`.
+     - If `arr[mid]` is less than the target value, move the `left` pointer to `mid + 1`.
+     - If `arr[mid]` is greater than the target value, move the `right` pointer to `mid - 1`.
+   - **Repeat**: Continue the process until `left` exceeds `right`.
+
+6. **Iterative vs. Recursive Implementation**:
+   - **Iterative**:
+     ```typescript
+     function binarySearch(arr: number[], target: number): number {
+       let left = 0;
+       let right = arr.length - 1;
+       while (left <= right) {
+         const mid = Math.floor((left + right) / 2);
+         if (arr[mid] === target) {
+           return mid;
+         } else if (arr[mid] < target) {
+           left = mid + 1;
+         } else {
+           right = mid - 1;
+         }
+       }
+       return -1;
+     }
+     ```
+
+   - **Recursive**:
+     ```typescript
+     function binarySearchRecursive(arr: number[], target: number, left: number = 0, right: number = arr.length - 1): number {
+       if (left > right) {
+         return -1;
+       }
+       const mid = Math.floor((left + right) / 2);
+       if (arr[mid] === target) {
+         return mid;
+       } else if (arr[mid] < target) {
+         return binarySearchRecursive(arr, target, mid + 1, right);
+       } else {
+         return binarySearchRecursive(arr, target, left, mid - 1);
+       }
+     }
+     ```
+
+7. **Advantages**:
+   - **Efficiency**: Binary search is much faster than linear search for large datasets due to its logarithmic time complexity.
+   - **Simplicity**: The algorithm is relatively simple and easy to implement.
+
+8. **Limitations**:
+   - **Sorted Data Requirement**: The array must be sorted before performing binary search. If the data is unsorted, it must be sorted first, which takes \(O(n \log n)\) time.
+   - **Fixed Size**: Binary search works efficiently on data structures that allow random access (like arrays). It is not suitable for linked lists due to the lack of direct access to the middle element.
+
+9. **Applications**:
+   - **Search Operations**: Commonly used in search operations in sorted arrays or lists.
+   - **Finding Boundaries**: Used in algorithms to find the boundaries of specific conditions, like finding the first or last occurrence of a target value in a sorted array.
+   - **Efficient Lookup**: Utilized in various real-time systems where fast lookup is essential, such as in database indexing and memory allocation algorithms.
+
+10. **Common Errors**:
+    - **Incorrect Mid Calculation**: Ensure correct parentheses to avoid errors in mid calculation: `mid = Math.floor((left + right) / 2)`.
+    - **Infinite Loop**: Ensure the loop terminates correctly, particularly by updating the `left` and `right` pointers appropriately.
+
+### Summary
+
+Binary search is a powerful and efficient algorithm for searching in sorted arrays. Its logarithmic time complexity makes it suitable for large datasets, though it requires the data to be sorted. By understanding its mechanics, applications, and limitations, you can leverage binary search to improve the performance of search operations in your programs.
 
 ##### 2. **Linear Search**
 ```typescript
