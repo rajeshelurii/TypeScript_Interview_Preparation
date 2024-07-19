@@ -43,17 +43,6 @@ Node.js and npm are essential tools for modern JavaScript development, particula
 
 ### 2. Basic Types
 
-**1.Number**
-**2.String**
-**3.Boolean**
-**4.Array**
-**5.Tuple**
-**6.Enum**
-**7.Any**
-**8.Void**
-**9.Null and Undefined**
-**10.Never**
-
 #### 1.Number
 TypeScript supports all numeric values as `number`.
 ```typescript
