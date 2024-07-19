@@ -43,38 +43,49 @@ Node.js and npm are essential tools for modern JavaScript development, particula
 
 ### 2. Basic Types
 
-#### Number
+**1.Number**
+**2.String**
+**3.Boolean**
+**4.Array**
+**5.Tuple**
+**6.Enum**
+**7.Any**
+**8.Void**
+**9.Null and Undefined**
+**10.Never**
+
+#### 1.Number
 TypeScript supports all numeric values as `number`.
 ```typescript
 let age: number = 25;
 ```
 
-#### String
+#### 2.String
 String values are represented with the `string` type.
 ```typescript
 let name: string = 'John Doe';
 ```
 
-#### Boolean
+#### 3.Boolean
 Boolean values are represented with the `boolean` type.
 ```typescript
 let isStudent: boolean = true;
 ```
 
-#### Array
+#### 4.Array
 Arrays can be defined in two ways: using the type followed by `[]` or using the generic `Array<type>`.
 ```typescript
 let numbers: number[] = [1, 2, 3];
 let fruits: Array<string> = ['Apple', 'Banana', 'Cherry'];
 ```
 
-#### Tuple
+#### 5.Tuple
 Tuples allow you to express an array with a fixed number of elements whose types are known.
 ```typescript
 let person: [string, number] = ['Alice', 30];
 ```
 
-#### Enum
+#### 6.Enum
 Enums allow you to define a set of named constants.
 ```typescript
 enum Color {
@@ -85,7 +96,7 @@ enum Color {
 let c: Color = Color.Green;
 ```
 
-#### Any
+#### 7.Any
 The `any` type allows you to opt-out of type checking.
 ```typescript
 let randomValue: any = 10;
@@ -93,7 +104,7 @@ randomValue = 'Hello';
 randomValue = true;
 ```
 
-#### Void
+#### 8.Void
 The `void` type is used for functions that do not return a value. It can implicitly return undefined.
 ```typescript
 function logMessage(message: string): void {
@@ -101,7 +112,7 @@ function logMessage(message: string): void {
 }
 ```
 
-#### Null and Undefined
+#### 9.Null and Undefined
 In TypeScript, `null` and `undefined` are distinct types that represent the absence of a value. They are part of the basic type system and have specific uses and behaviors.
 
 **TypeScript Configuration**
@@ -140,7 +151,7 @@ maybe = null;        // OK
 maybe = undefined;   // OK
 ```
 
-#### Never
+#### 10.Never
 The `never` type represents the type of values that never occur.  It doesn't even return undefined like void. it is used for throwing exceptions since the value never occurs, example throwing an exception is default case in switch statement.
 ```typescript
 function error(message: string): never {
