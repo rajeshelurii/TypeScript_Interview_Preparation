@@ -150,17 +150,14 @@ function error(message: string): never {
 
 ### 3. Advanced Types
 
-#### Type Assertions
-Type assertions are used when you know more about the type than TypeScript does.
+#### Interface
+Interfaces define the shape of an object.
 ```typescript
-let someValue: any = 'this is a string';
-let strLength: number = (someValue as string).length;
-```
-
-#### Type Inference
-TypeScript can infer types when they are not explicitly provided.
-```typescript
-let x = 3; // inferred as number
+interface User {
+  name: string;
+  age: number;
+}
+let user: User = { name: 'John', age: 30 };
 ```
 
 #### Union Types
@@ -169,6 +166,19 @@ Union types allow a value to be one of several types.
 let value: number | string;
 value = 42;
 value = 'Hello';
+```
+
+#### Type Inference
+TypeScript can infer types when they are not explicitly provided.
+```typescript
+let x = 3; // inferred as number
+```
+
+#### Type Assertions
+Type assertions are used when you know more about the type than TypeScript does.
+```typescript
+let someValue: any = 'this is a string';
+let strLength: number = (someValue as string).length;
 ```
 
 #### Intersection Types
@@ -198,16 +208,6 @@ type ID = string | number;
 let userId: ID;
 userId = 123;
 userId = 'abc';
-```
-
-#### Interface
-Interfaces define the shape of an object.
-```typescript
-interface User {
-  name: string;
-  age: number;
-}
-let user: User = { name: 'John', age: 30 };
 ```
 
 #### Function Types
