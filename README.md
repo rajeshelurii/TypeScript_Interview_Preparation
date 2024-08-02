@@ -225,7 +225,8 @@ mySearch = function(source: string, subString: string) {
 ### 4. Object-Oriented Programming
 
 #### Class Basics
-TypeScript supports object-oriented programming features like classes.
+A class is like a blueprint for creating objects. It defines a set of properties (attributes) and methods (functions) that the objects created from the class will have. Think of it like a template. For example, a class `Car` might have properties like `color` and `model` and methods like `drive` and `stop`.
+
 ```typescript
 class Person {
   name: string;
@@ -242,7 +243,8 @@ john.greet(); // Output: Hello, my name is John Doe
 ```
 
 #### Inheritance
-Classes can inherit from other classes.
+Inheritance is a concept where one class (called a child class or subclass) can inherit properties and methods from another class (called a parent class or superclass). This allows the child class to reuse code from the parent class and also to extend or modify it. For example, if we have a class `Vehicle`, a class `Car` can inherit from `Vehicle`, so it will have all the properties and methods of `Vehicle`, and it can also have additional properties and methods specific to `Car`.
+
 ```typescript
 class Employee extends Person {
   employeeId: number;
